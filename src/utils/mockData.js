@@ -567,7 +567,7 @@ const resData = [
     },
     
     {
-      "id": "57686",
+      "id": "57600",
       "name": "Subway",
       "cloudinaryImageId": "1ace5fa65eff3e1223feb696c956b38b",
       "locality": "Saviour Mall",
@@ -581,7 +581,7 @@ const resData = [
       ],
       "avgRating": 3.5,
       "feeDetails": {
-        "restaurantId": "57686",
+        "restaurantId": "57600",
         "fees": [
           {
             "name": "BASE_DISTANCE",
