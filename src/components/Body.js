@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import resData from "../utils/mockData";
 import { useState, useEffect } from "react";
 import { SWIGGY_API_URL } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // local state variable
@@ -44,6 +45,10 @@ const Body = () => {
     return result;
   };
 
+  if (listOfRestaurants?.length == 0) {
+    return <Shimmer />;
+  }
+
   return (
     <div className="body">
       <div className="filter">
@@ -57,6 +62,7 @@ const Body = () => {
           Top Rated Restaurants
         </button>
       </div>
+
       <div className="res-container">
         {listOfRestaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.id} resData={restaurant} />
