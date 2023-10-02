@@ -48,10 +48,12 @@
 
 .filter {
   padding: 10px;
+  display: flex;
 }
 
 .filter-btn {
   cursor: pointer;
+  margin-left: 20px;
 }
 
 .shimmer-container {
