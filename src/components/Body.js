@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { SWIGGY_API_URL, ENABLE_ACTUAL_API_CALL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   // local state variable
@@ -26,8 +27,10 @@ const Body = () => {
     const json = await data.json();
     const formattedRestaurants = buildRestaurantObject(json);
 
-    if(formattedRestaurants?.length == 0) {
-      console.error("Seems to be Swiggy API not working. set ENABLE_ACTUAL_API_CALL = false in constants.js")
+    if (formattedRestaurants?.length == 0) {
+      console.error(
+        "Seems to be Swiggy API not working. set ENABLE_ACTUAL_API_CALL = false in constants.js"
+      );
     }
     setListOfResturants(formattedRestaurants);
     setFilteredRestuarants(formattedRestaurants);
@@ -70,6 +73,16 @@ const Body = () => {
 
     setFilteredRestuarants(filteredRestuarants);
   };
+
+  const onLineStatus = useOnlineStatus();
+
+  if (onLineStatus == false) {
+    return (
+      <div>
+        <h1>You are offline </h1>
+      </div>
+    );
+  }
 
   return listOfRestaurants?.length == 0 ? (
     <Shimmer />
