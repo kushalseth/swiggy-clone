@@ -3,6 +3,7 @@ import mockData from "../utils/mockData";
 import { useState, useEffect } from "react";
 import { SWIGGY_API_URL, ENABLE_ACTUAL_API_CALL } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // local state variable
@@ -102,7 +103,13 @@ const Body = () => {
 
       <div className="res-container">
         {filteredRestuarants.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} resData={restaurant} />
+          <Link
+            key={restaurant.id}
+            to={"/restaurants/" + restaurant.id}
+            className="res-link"
+          >
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

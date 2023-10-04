@@ -8,8 +8,8 @@ export const LOGO_URL =
 export const SWIGGY_API_URL =
   "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING";
 
-// Swiggy API to get Restaurant Menu data with corsproxy
+// Swiggy API to get Restaurant Menu data with corsproxy -- 628137
 export const SWIGGY_MENU_API_URL =
-  "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=628137";
+  "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=";
 
 export const ENABLE_ACTUAL_API_CALL = true;
