@@ -6,6 +6,8 @@
 
 .logo {
   width: 200px;
+  height: 50px;
+  padding: 22px;
 }
 
 .nav-items > ul {
@@ -72,4 +74,11 @@
 .btn-login {
   padding: 0 20px;
   cursor: pointer;
+}
+
+.logo-container {
+  padding-top: 13px;
+  display: flex;
+  list-style-type: none;
+  font-size: 24px;
 }

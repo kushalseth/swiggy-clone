@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import mockData from "../utils/mockData";
 import { useState, useEffect } from "react";
-import { SWIGGY_API_URL } from "../utils/constants";
+import { SWIGGY_API_URL, ENABLE_ACTUAL_API_CALL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -11,7 +11,7 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  const enableActualApiCall = false;
+  const enableActualApiCall = ENABLE_ACTUAL_API_CALL;
 
   console.log("body rendered");
 
@@ -59,7 +59,6 @@ const Body = () => {
 
   const searchTextHandler = () => {
     console.log(searchText);
-    debugger;
     const filteredRestuarants = listOfRestaurants.filter((restaurant) =>
       restaurant.name.toLowerCase().includes(searchText.toLowerCase())
     );
