@@ -25,6 +25,10 @@ const Body = () => {
 
     const json = await data.json();
     const formattedRestaurants = buildRestaurantObject(json);
+
+    if(formattedRestaurants?.length == 0) {
+      console.error("Seems to be Swiggy API not working. set ENABLE_ACTUAL_API_CALL = false in constants.js")
+    }
     setListOfResturants(formattedRestaurants);
     setFilteredRestuarants(formattedRestaurants);
   };
