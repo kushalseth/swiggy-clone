@@ -12,4 +12,4 @@ export const SWIGGY_API_URL =
 export const SWIGGY_MENU_API_URL =
   "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=";
 
-export const ENABLE_ACTUAL_API_CALL = false;
+export const ENABLE_ACTUAL_API_CALL = true;

@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import mockData from "../utils/mockData";
 import { useState, useEffect } from "react";
 import { SWIGGY_API_URL, ENABLE_ACTUAL_API_CALL } from "../utils/constants";
@@ -11,6 +11,8 @@ const Body = () => {
   const [listOfRestaurants, setListOfResturants] = useState([]);
   const [filteredRestuarants, setFilteredRestuarants] = useState([]);
   const onlineStatus = useOnlineStatus();
+
+  const PromotedRestaurant = withPromotedLabel(RestaurantCard);
 
   const [searchText, setSearchText] = useState("");
 
@@ -27,6 +29,8 @@ const Body = () => {
 
     const json = await data.json();
     const formattedRestaurants = buildRestaurantObject(json);
+
+    console.log("formattedRestaurants: ", formattedRestaurants);
 
     if (formattedRestaurants?.length == 0) {
       console.error(
@@ -130,7 +134,11 @@ const Body = () => {
             to={"/restaurants/" + restaurant.id}
             className="res-link"
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant.avgRating < 4 ? (
+              <PromotedRestaurant resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
