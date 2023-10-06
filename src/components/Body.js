@@ -10,6 +10,7 @@ const Body = () => {
   // local state variable
   const [listOfRestaurants, setListOfResturants] = useState([]);
   const [filteredRestuarants, setFilteredRestuarants] = useState([]);
+  const onlineStatus = useOnlineStatus();
 
   const [searchText, setSearchText] = useState("");
 
@@ -88,29 +89,33 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="search m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="search-box border border-solid border-orange-900"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           ></input>
           <button
-            className="btn-search"
+            className="btn-search px-4 py-2 bg-orange-100 m-4 rounded-lg"
             onClick={() => {
               searchTextHandler();
             }}
           >
             Search
           </button>
+        </div>
+        <div className="search m-4 p-4 flex items-center">
           <button
-            className="filter-btn"
+            className="filter-btn btn-search px-4 py-2 bg-orange-400 m-4 rounded-lg"
             onClick={() => {
-              tt = resData.filter((x) => x.avgRating > 4);
-              setListOfResturants(tt);
+              const filteredRestuarants = listOfRestaurants.filter(
+                (res) => res?.avgRating > 4
+              );
+              setFilteredRestuarants(filteredRestuarants);
             }}
           >
             Top Rated Restaurants
@@ -118,7 +123,7 @@ const Body = () => {
         </div>
       </div>
 
-      <div className="res-container">
+      <div className="res-container flex flex-wrap">
         {filteredRestuarants.map((restaurant) => (
           <Link
             key={restaurant.id}

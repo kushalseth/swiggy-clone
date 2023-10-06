@@ -13,35 +13,42 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={CDN_URL} />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>{onlineStatus == true ? "Online" : "Offline"}</li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Us</Link>
-          </li>
-          <li>
-            <Link to="/grocery">Grocery</Link>
-          </li>          
-          <li>Cart</li>
-          <button
-            className="btn-login"
-            onClick={() => {
-              handleLogin();
-            }}
-          >
-            {btnName}
-          </button>
-        </ul>
+    <div>
+      <div className="flex justify-between bg-orange-100 shadow-sm m-2">
+        <div className="logo-container p-4 m-4">
+          <img className="w-56" src={CDN_URL} />
+        </div>
+        <div className="flex items-center">
+          <ul className="flex p-4 m-4">
+            <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center">
+              <Link to="/about">About Us</Link>
+            </li>
+            <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center">
+              <Link to="/contact">Contact Us</Link>
+            </li>
+            <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center">
+              <Link to="/grocery">Grocery</Link>
+            </li>
+            <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center">
+              Cart
+            </li>
+            <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center">
+              <button
+                onClick={() => {
+                  handleLogin();
+                }}
+              >
+                {btnName}
+              </button>
+            </li>
+            <li className="px-4 py-3">
+              {onlineStatus == true ? "✅ Online" : "🔴 Offline"}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
