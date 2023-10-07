@@ -22,7 +22,18 @@ const useRestaurantMenu = (resId) => {
       json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
         ?.card?.itemCards;
 
-    setResInfo({ info: info, menuItems: menuItems });
+    debugger;
+    const filteredCategories =
+      json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+        (c) =>
+          c.card?.card["@type"] ==
+          "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
+        //||
+        //  c.card?.card["@type"] ==
+        //  "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
+      );
+
+    setResInfo({ info: info, menuItems: filteredCategories });
   };
   return resInfo;
 };

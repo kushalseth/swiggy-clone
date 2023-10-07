@@ -18,8 +18,6 @@ const Body = () => {
 
   const enableActualApiCall = ENABLE_ACTUAL_API_CALL;
 
-  console.log("body rendered");
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -29,8 +27,6 @@ const Body = () => {
 
     const json = await data.json();
     const formattedRestaurants = buildRestaurantObject(json);
-
-    console.log("formattedRestaurants: ", formattedRestaurants);
 
     if (formattedRestaurants?.length == 0) {
       console.error(
@@ -71,7 +67,6 @@ const Body = () => {
   };
 
   const searchTextHandler = () => {
-    console.log(searchText);
     const filteredRestuarants = listOfRestaurants.filter((restaurant) =>
       restaurant.name.toLowerCase().includes(searchText.toLowerCase())
     );

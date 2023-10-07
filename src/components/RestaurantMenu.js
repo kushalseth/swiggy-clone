@@ -3,6 +3,7 @@ import { SWIGGY_MENU_API_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -13,23 +14,23 @@ const RestaurantMenu = () => {
   ) : (
     <div className="restaurant-menu-container">
       <div>
-        <h1>{resInfo?.info?.name}</h1>
+        <h1 className="font-bold text-2xl my-6 text-center">
+          {resInfo?.info?.name}
+        </h1>
       </div>
-      <div>
-        <h5>
-          {resInfo?.info?.cuisines?.join(",")} -{" "}
-          {resInfo?.info?.costForTwoMessage}
-        </h5>
+      <div className="font-bold text-lg text-center">
+        {resInfo?.info?.cuisines?.join(", ")} -{" "}
+        {resInfo?.info?.costForTwoMessage}
       </div>
-      <ul>
-        {resInfo?.menuItems?.map((item) => {
-          return (
-            <li key={item?.card?.info?.id}>
-              {item?.card?.info?.name} - RS. {item?.card?.info?.price / 100}
-            </li>
-          );
-        })}
-      </ul>
+      {/* accordions */}
+      {resInfo?.menuItems?.map((item) => {
+        return (
+          <RestaurantCategory
+            key={item?.card?.info?.id}
+            data={item?.card?.card}
+          />
+        );
+      })}
     </div>
   );
 };
