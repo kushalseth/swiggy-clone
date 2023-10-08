@@ -1,15 +1,14 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({ data }) => {
+const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   let outputCategory = [];
-  const [showItems, setShowItems] = useState(false);
   debugger;
 
   data.categories.forEach((x) => (outputCategory = [...x.itemCards]));
 
   const handleClick = () => {
-    setShowItems(!showItems);
+    setShowIndex();
   };
 
   debugger;
