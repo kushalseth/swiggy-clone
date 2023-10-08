@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { CDN_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
@@ -11,6 +12,8 @@ const Header = () => {
   };
 
   const onlineStatus = useOnlineStatus();
+
+  const data = useContext(UserContext);
 
   return (
     <div>
@@ -43,7 +46,8 @@ const Header = () => {
               >
                 {btnName}
               </button>
-            </li>
+            </li>          
+            <li className="px-4 py-3">{data?.LoggedInUser}</li>
             <li className="px-4 py-3">
               {onlineStatus == true ? "✅ Online" : "🔴 Offline"}
             </li>
