@@ -22,7 +22,6 @@ const useRestaurantMenu = (resId) => {
       json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
         ?.card?.itemCards;
 
-    debugger;
     const filteredCategories =
       json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
         (c) =>

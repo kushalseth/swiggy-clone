@@ -3,7 +3,6 @@ import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   let outputCategory = [];
-  debugger;
 
   data.categories.forEach((x) => (outputCategory = [...x.itemCards]));
 
@@ -11,7 +10,6 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
     setShowIndex();
   };
 
-  debugger;
   return (
     <div className="accordion-container floa">
       <div className="w-6/12 bg-orange-300 shadow-lg p-4 mx-auto my-4">
