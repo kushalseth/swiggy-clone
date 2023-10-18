@@ -6,11 +6,11 @@
 
 # Restaurants List
 
-![restaurantlist](https://raw.githubusercontent.com/kushalseth/swiggy-clone/main/images/restaurantlist.png)
+![restaurantlist](https://user-images.githubusercontent.com/10295411/276411865-08d35711-8020-49dc-be3d-9275bd8adb63.png)
 
 # Searching Sub for Subways around me
 
-![search](https://raw.githubusercontent.com/kushalseth/swiggy-clone/main/images/search.png)
+![search](https://user-images.githubusercontent.com/10295411/276411381-b74aea19-60ac-40ab-ac87-c9f96cfda365.png)
 
 # Top Restaurants
 
@@ -18,7 +18,13 @@
 
 # Restaurants Details
 
-![toprestaurants](https://raw.githubusercontent.com/kushalseth/swiggy-clone/main/images/detailspage.png)
+![toprestaurants](https://user-images.githubusercontent.com/10295411/276411602-deaf39ef-f7b7-437e-9ab3-423f3904465e.png)
+
+![toprestaurants](https://user-images.githubusercontent.com/10295411/276411718-b06a411c-4e62-4460-a898-27d4eab33f8b.png)
+
+# Test Cases
+
+![toprestaurants](https://user-images.githubusercontent.com/10295411/276411958-a070c4cb-c8f0-43f6-8871-675ec035b7af.png)
 
 ## localhost sample urls
 
