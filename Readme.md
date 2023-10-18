@@ -2,9 +2,30 @@
 
 -- App link for learning: https://swiggy-clone-kushal-learning.netlify.app/
 
+## Project Images
+
+# Restaurants List
+
+![restaurantlist](./images/restaurantlist.png)
+
+# Searching Sub for Subways around me
+
+![search](./images/search.png)
+
+# Top Restaurants
+
+![toprestaurants](./images/toprestaurants.png)
+
+# Restaurants Details
+
+![toprestaurants](./images/detailspage.png)
+
+## localhost sample urls
+
+-- http://localhost:1234
 -- http://localhost:1234/restaurants/175292
 
-Configuring Netlify using netlify CLI
+## Configuring Netlify using netlify CLI
 
 -- install netlify globally
 (> npm install netlify-cli -g)
