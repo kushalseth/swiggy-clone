@@ -18,7 +18,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
           onClick={handleClick}
         >
           {/** Header */}
-          <span className="font-bold text-lg">
+          <span data-testid="outputCategoryName" className="font-bold text-lg">
             {data.title} ({outputCategory?.length})
           </span>
           <span> ⬇️ </span>

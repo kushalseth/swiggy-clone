@@ -6,11 +6,10 @@ import { act } from "react-dom/test-utils";
 import { BrowserRouter } from "react-router-dom";
 
 beforeAll(() => {
-  console.log("Before All");
+ 
 });
 
 beforeEach(() => {
-  console.log("Before Each");
 });
 
 global.fetch = jest.fn(() => {

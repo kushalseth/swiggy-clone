@@ -27,7 +27,8 @@ const RestaurantMenu = () => {
       {resInfo?.menuItems?.map((item, index) => {
         return (
           <RestaurantCategory
-            key={item?.card?.info?.id}
+            data-testid="restaurantCategory"
+            key={item?.card?.info?.id + Math.random()}
             data={item?.card?.card}
             showItems={index == showIndex ? true : false}
             setShowIndex={() => setShowIndex(index)}

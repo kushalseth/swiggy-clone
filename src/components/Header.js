@@ -38,7 +38,10 @@ const Header = () => {
             <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center">
               <Link to="/grocery">Grocery</Link>
             </li>
-            <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center font-bold text-xl">
+            <li
+              data-testid="cartsCount"
+              className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center font-bold text-xl"
+            >
               <Link to="/cart">Cart ({cartItems?.length} items)</Link>
             </li>
             <li className="px-4 py-3 rounded-2xl hover:bg-orange-300 text-center">

@@ -24,8 +24,6 @@ describe("these are Contact Us test cases", () => {
 
     const inputBoxes = screen.getAllByRole("textbox");
 
-    console.log("kushal ", inputBoxes.length);
-
     expect(inputBoxes.length).toBe(2);
   });
 });
