@@ -1,12 +1,15 @@
 import { LOGO_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
-  console.log("resData ", props?.resData);
+  // console.log("resData ", props?.resData);
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
     props?.resData;
 
   return (
-    <div className="res-card m-4 p-4 w-[250px] h-[420px] bg-gray-100 hover:bg-orange-200 rounded-2xl">
+    <div
+      data-testid="resCardData"
+      className="res-card m-4 p-4 w-[250px] h-[420px] bg-gray-100 hover:bg-orange-200 rounded-2xl"
+    >
       <img
         className="res-logo h-52 w-[250px] rounded-2xl"
         src={LOGO_URL + cloudinaryImageId}
