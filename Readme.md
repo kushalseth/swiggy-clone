@@ -6,19 +6,19 @@
 
 # Restaurants List
 
-![restaurantlist](./images/restaurantlist.png)
+![restaurantlist](https://raw.githubusercontent.com/kushalseth/swiggy-clone/main/images/restaurantlist.png)
 
 # Searching Sub for Subways around me
 
-![search](./images/search.png)
+![search](https://raw.githubusercontent.com/kushalseth/swiggy-clone/main/images/search.png)
 
 # Top Restaurants
 
-![toprestaurants](./images/toprestaurants.png)
+![toprestaurants](https://raw.githubusercontent.com/kushalseth/swiggy-clone/main/images/toprestaurants.png)
 
 # Restaurants Details
 
-![toprestaurants](./images/detailspage.png)
+![toprestaurants](https://raw.githubusercontent.com/kushalseth/swiggy-clone/main/images/detailspage.png)
 
 ## localhost sample urls
 
